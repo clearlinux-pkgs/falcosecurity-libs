@@ -1,0 +1,13 @@
+-DCREATE_TEST_TARGETS=OFF
+-DUSE_BUNDLED_DEPS=OFF
+-DUSE_BUNDLED_GTEST=OFF
+-DENABLE_DKMS=OFF
+
+-DBUILD_LIBSCAP_EXAMPLES=OFF
+-DBUILD_LIBSINSP_EXAMPLES=OFF
+
+# Have to set these three just right to make it not fail on driver_config.h
+# See https://github.com/falcosecurity/libs/pull/479
+-DUSE_BUNDLED_DRIVER=ON
+-DBUILD_DRIVER=OFF
+-DBUILD_BPF=OFF

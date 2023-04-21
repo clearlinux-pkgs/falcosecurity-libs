@@ -1,0 +1,2 @@
+# Don't want to install buildable source
+rm -rf %{buildroot}/usr/src/scap-0.0.0

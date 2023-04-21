@@ -1,0 +1,27 @@
+From 6593df83263a94a2c7841a2be40e34e9120fbab7 Mon Sep 17 00:00:00 2001
+From: "Brett T. Warden" <brett.t.warden@intel.com>
+Date: Thu, 20 Apr 2023 16:03:30 -0700
+Subject: [PATCH] Use C++17
+
+See https://github.com/falcosecurity/libs/pull/950 for a similar, but
+not compatible commit.
+---
+ cmake/modules/CompilerFlags.cmake | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/cmake/modules/CompilerFlags.cmake b/cmake/modules/CompilerFlags.cmake
+index 2e4defa6eb5f..09dba4354e74 100644
+--- a/cmake/modules/CompilerFlags.cmake
++++ b/cmake/modules/CompilerFlags.cmake
+@@ -34,7 +34,7 @@ if(NOT MSVC)
+ 	endif()
+ 
+ 	set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${FALCOSECURITY_LIBS_COMMON_FLAGS}")
+-	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${FALCOSECURITY_LIBS_COMMON_FLAGS} -std=c++0x")
++	set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${FALCOSECURITY_LIBS_COMMON_FLAGS} -std=c++17")
+ 
+ 	set(CMAKE_C_FLAGS_DEBUG "${FALCOSECURITY_LIBS_DEBUG_FLAGS}")
+ 	set(CMAKE_CXX_FLAGS_DEBUG "${FALCOSECURITY_LIBS_DEBUG_FLAGS}")
+-- 
+2.40.0
+
